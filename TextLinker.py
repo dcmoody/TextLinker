@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import re
 import codecs
-text = codecs.open('mart3g.txt','r+','utf-8') #first text
+text = codecs.open('txt name','r+','utf-8') #first text
 content = text.read()
 result = codecs.open('raw4.html', 'w+','utf-8') #output text
 result.write("""
@@ -60,7 +60,7 @@ for i in sentences:
     b=b+1
     result.write('<span data-ng-mouseover="GClass(%s)">%s</span>' %(b,i)+"\n")
 result.write('<span data-ng-mouseover="GClass(%s)">%s</span>' %(b+1,end)) #separate statement for closing. no punctuation follows it, so it wouldn't get written otherwise
-text = codecs.open('mart3e.txt','r+','utf-8') #second text
+text = codecs.open('txt name.txt','r+','utf-8') #second text
 content = text.read()
 rep=re.sub('''      ''','''</br></br>&nbsp;&nbsp;&nbsp;&nbsp;''',content)
 sentences=re.split('''((?!\. Jahrhundert)(?<!Mr)(?<!circa)(?<!cf)(?!"\s[a-z|I])(?![\.\!\?]\)[\.\!\?])(?![\.\?\!]\s[\-,?!])[\.\?\!"]\s)''', rep) #splits into a list based on punction
